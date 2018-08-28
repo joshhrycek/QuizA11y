@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.row::before,
+.row::after {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-3, .col-4, .col-6, .col-12 {
+  float: left;
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+.col-3, .col-4, .col-6, .col-12 {
+  width: 100%;
+}
+
+header{
+  margin: auto;
+}
+
+.logo{
+  height: 150px;
+  width: 160px;
+}
+
+header ul {
+  list-style: none;
+  text-align: right;
+}
+
+header ul li {
+  font-size: 24px;
+}
+
+.submitButton {
+  margin: 10px 0px 5px 0px;
+  height: 30px;
+  background-color: #1376AB;
+  color: whitesmoke;
+  transition: all 0.3s ease-out;
+  border: none
+}
+
+.submitButton:hover,.nextQuestion:hover,.restartQuizButton:hover,.startButton:hover{
+  background-color: #E3DE19;
+  color: black;
+  transition: all 0.3s ease-out;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset > div {
+  padding: 5px 0px 5px 0px;
+  margin-bottom: 10px;
+}
+
+legend{
+  margin-right: 0;
+}
+
+label{
+  padding: 5px 0px 5px 0px;
+  margin: 5px 0px 5px 0px;
+  background-color: #DE0213;
+  display:flex;
+}
+
+label:first-child{
+  margin-top: 25px;
+}
+
+label:hover{
+  background-color: #E3DE19;
+  transition: all 0.3s ease-out;
+  color: black;
+}
+
+.nextQuestion,.restartQuizButton,.startButton{
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+  height: 30px;
+  background-color: #096291;
+  color:whitesmoke;
+  border: none;
+}
+
+label,button{
+  font-size: 20px;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    float: left;
+    margin-top: 3px;
+    top: 0;
+    left: 0;
+    margin-right: 10px;
+    margin-left: 3px;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+input:checked ~ .checkmark {
+    background-color: #096291;
+}
+
+input:checked{
+    display: block;
+}
+
+.checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.answer-text{
+  text-align: left;
+  font-weight: normal;
+}
+
+h1,.correctMessage > p,.wrongMessage > p,.answersRatio > p {
+  text-align: center;
+  font-size: 25px
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 10px
+}
+
+
+@media screen and (max-width: 420px) {
+  header ul li{
+    font-size: 21px;
+  }
+
+.checkmark {
+  margin-top: 0px;
+}
+
+label, button {
+    font-size: 16px;
+}
+  .logo{
+  height: 130px;
+  width: 130px;
+}
+
+
+ h1, .correctMessage > p, .wrongMessage > p, .answersRatio > p ,h2{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  header ul li{
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 329px) {
+  header ul li{
+    font-size: 15px;
+  }
+
+  header ul {
+    margin
+  }
+}
